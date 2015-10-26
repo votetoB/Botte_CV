@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="first_user">
+    <h2>{{ pick.first_user.battle_tag}}</h2>
+    {% for choise in pick.first_user.choices.all %}
+    <p>{{ choise }}</p>
+    {% endfor %}
+</div>
+<div class="second_user">
+    <h2>{{ pick.second_user.battle_tag}}</h2>
+    {% for choise in pick.second_user.choices.all %}
+    <p>{{ choise }}</p>
+    {% endfor %}
+</div>
+{% endblock %}

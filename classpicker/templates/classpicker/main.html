@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block head_extra %}
+    {% load staticfiles %}
+    <script src="{% static 'classpicker/js/jquery-1.11.2.min.js' %}"></script>
+    <script src="{% static 'classpicker/js/main.js'%}"></script>
+{% endblock %}
+{% block content %}
+    {% if role == 'first' %}
+    <div class="note">Pass this link to your opponent: {{ second_link }}</div>
+    {% endif %}
+    <form id="pick_form" method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Pick"/>
+    </form>
+
+{% endblock %}

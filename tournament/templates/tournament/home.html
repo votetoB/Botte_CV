@@ -1,0 +1,11 @@
+{% extends 'tournament/tournament_base.html' %}
+{% block content %}
+    <section class="table">
+    {% for tournament in tournaments %}
+        <h2>
+        {{ tournament.title }}
+        </h2>
+    {% endfor %}
+    </section>
+
+{% endblock %}

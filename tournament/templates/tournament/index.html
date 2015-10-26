@@ -1,0 +1,8 @@
+{% extends 'tournament/tournament_base.html' %}
+{% block content %}
+    <section>
+        <h2>{{ tournament.title }}</h2>
+        <div>Max participants: {{ tournament.max_participants }}</div>
+        <div>Start time: {{ tournament.start_time }}</div>
+    </section>
+{% endblock %}

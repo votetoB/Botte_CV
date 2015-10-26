@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block head_extra %}
+    {% load staticfiles %}
+    <script src="{% static 'classpicker/js/jquery-1.11.2.min.js' %}"></script>
+    <script src="{% static 'classpicker/js/start.js'%}"></script>
+{% endblock %}
+{% block content %}
+     <form id="start_pick_form" method="post" action="{% url 'classpicker:start' %}">
+    {% csrf_token %}
+        {{ pick_start_form.as_p }}
+{#        <input type="checkbox" id="pick_first" value="checked">#}
+{#        <label for="pick_first">Picks before bans</label>#}
+    <input type="submit" value="Start picking"/>
+    </form>
+
+{% endblock %}

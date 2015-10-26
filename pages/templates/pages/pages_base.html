@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head_extra %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    <title>Pages_base_title</title>
+{% endblock %}
+
+{% block content %}
+    <h2>Hello from pages_base</h2>
+{% endblock %}
